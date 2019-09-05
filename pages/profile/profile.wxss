@@ -1,0 +1,50 @@
+/* pages/profile/profile.wxss */
+.header {
+  display: flex;
+  flex-direction: column;
+  background: #3b2b75;
+  height: 400rpx;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 10rpx;
+}
+.header image {
+  display: block;
+  height: 150rpx;
+  width: 150rpx;
+  margin: 0 auto;
+}
+.header text {
+  color: #ffffff;
+  margin-top: 20rpx;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.item {
+  display: flex;
+  justify-content: space-between;
+  color: #888;
+  padding: 20rpx 30rpx;
+  border-bottom: 1px solid #eeeeee;
+  background: #ffffff;
+  align-items: center;
+}
+.item::after {
+  content: '';
+  display: inline-block;
+  height: 10rpx;
+  width: 10rpx;
+  border: 0 solid #ccc;
+  border-width: 3rpx 3rpx 0 0;
+  transform: matrix(1, 1, -1, 1, 0, 0);
+}
+.item:nth-of-type(2) {
+  margin-bottom: 20rpx;
+}
+.item:nth-of-type(6) {
+  margin-bottom: 20rpx;
+}

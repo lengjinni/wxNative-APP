@@ -1,0 +1,21 @@
+<!--pages/messages/messages.wxml-->
+<view class="header">
+    <swiper indicator-dots="{{indicatorDots}}"
+            autoplay="{{autoplay}}" 
+            interval="{{interval}}" 
+            duration="{{duration}}">
+      <block wx:for="{{imgUrls}}" wx:key="swiper">
+        <swiper-item>
+          <navigator url="{{item}}">
+            <image src="{{item}}" class="slide-image" mode="aspectFill"/> 
+          </navigator>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class="content">
+    <view wx:for="{{allMessage}}" wx:key="mes" class="item">
+      <text class="title">{{item.title}}</text>
+      <text class="pragragh">{{item.content}}</text>
+    </view>
+  </view>

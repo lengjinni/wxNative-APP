@@ -1,0 +1,13 @@
+<!--pages/profile/profile.wxml-->
+<view class="header">
+  <image src="../../images/avatar.png"></image>
+  <text>{{userName}}</text>
+</view>
+<view class="content">
+  <block wx:for="{{itemData}}" wx:key="about" >
+    <navigator url="{{item.src}}" class="item">
+      <text>{{item.name}}</text>
+    </navigator> 
+  </block>
+</view>
+

@@ -1,0 +1,12 @@
+/* pages/setting/setting.wxss */
+.setting {
+  margin-top: 20rpx;
+}
+.setting .item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  border-bottom: 1px solid #eeeeee;
+  padding: 20rpx 30rpx;
+}

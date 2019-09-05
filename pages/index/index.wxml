@@ -1,0 +1,33 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="header">
+    <swiper indicator-dots="{{indicatorDots}}"
+            autoplay="{{autoplay}}" 
+            interval="{{interval}}" 
+            duration="{{duration}}">
+      <block wx:for="{{imgUrls}}" wx:key="swiper">
+        <swiper-item>
+          <navigator url="{{item}}">
+            <image src="{{item}}" class="slide-image" mode="aspectFill"/> 
+          </navigator>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class="content">
+    <block>
+      <navigator 
+        wx:for="{{gridData}}" 
+        url="../list/list?cat={{index}}" 
+        wx:key="grid"
+        class="item">
+        <image src="{{item.imgSrc}}"></image>
+        <text>{{item.name}}</text>
+      </navigator>
+    </block>
+  </view>
+  <view class="footer">
+    <image src="../../assets/link-01.png"></image>
+    <image src="../../assets/link-02.png"></image>
+  </view>
+</view>
